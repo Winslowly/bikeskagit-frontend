@@ -3,7 +3,7 @@ import React from "react";
 function Random() {
     return (
         <div>
-            <div> Random component</div>
+            <button> Randomly Select a Ride </button>
         </div>
 
     );

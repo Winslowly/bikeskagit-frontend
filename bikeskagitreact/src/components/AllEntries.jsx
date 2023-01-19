@@ -2,7 +2,10 @@ import React from "react";
 
 function AllEntry() {
     return (
-    <div> <p>All Entry component</p></div>
+    <div> 
+        <p>All Entry component</p>
+        <p>Display Cards</p>
+    </div>
     );
 }
 
