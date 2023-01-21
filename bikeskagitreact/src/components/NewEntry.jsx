@@ -4,12 +4,17 @@ function NewEntry() {
     return (
     <div>
         <p> New Entry component</p>
-            <form>
-                <label>
-                    Date:
-                    <input type="text" name="date" />
-                </label>
-
+            <form class="w-full max-w-sm">
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+                        <label>
+                            Date:
+                            <input type="text" name="date" />
+                        </label>
+                    </div>    
+                </div>
+            </form>
+{/* 
                 <label>
                     Starting Location:
                     <input type="text" name="startloc" />
@@ -42,7 +47,7 @@ function NewEntry() {
                 
                 
                 <input type="submit" value="Submit" />
-            </form>
+            </form> */}
     </div>
     );
 }
