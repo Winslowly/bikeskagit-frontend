@@ -13,7 +13,7 @@ const App = () => {
       <div className='navbar'>
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
           <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Bike Skagit</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Bike Skagit.</span>
           </div>  
         </nav>
       </div>
