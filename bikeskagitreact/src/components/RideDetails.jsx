@@ -18,15 +18,15 @@ const RideDetails = ({ ride }) => {
 
 
     return (
-        <div className="ride-details">
-                    <p >Date: {ride.date}</p>
-                    <p >Start Location: {ride.startloc}</p>
-                    <p >End Location: {ride.endloc}</p>
-                    <p >Miles (one way): {ride.mileage}</p>
-                    <p >Elevation (ft): {ride.elevation}</p>
-                    <p >Notes: {ride.notes}</p>
-                    <p >Rest Location (lat/lon): {ride.restpin}</p>
-                    <button onClick={handleClick}>delete</button>
+        <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Date: <span className="font-normal text-gray-700 dark:text-gray-400">{ride.date}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Start Location: <span className="font-normal text-gray-700 dark:text-gray-400">{ride.startloc}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">End Location: <span className="font-normal text-gray-700 dark:text-gray-400">{ride.endloc}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Miles (one way): <span className="font-normal text-gray-700 dark:text-gray-400">{ride.mileage}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Elevation (ft): <span className="font-normal text-gray-700 dark:text-gray-400">{ride.elevation}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Notes: <span className="font-normal text-gray-700 dark:text-gray-400">{ride.notes}</span></p>
+                    <p className="font-semibold text-gray-700 dark:text-gray-400">Rest Location (lat/lon): <span className="font-normal text-gray-700 dark:text-gray-400">{ride.restpin}</span></p>
+                    <button onClick={handleClick} className="shadow bg-orange-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">delete</button>
         </div>
     )
 }
