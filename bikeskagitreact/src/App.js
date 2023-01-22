@@ -16,16 +16,16 @@ const App = () => {
             
         <div className='navlinks'>
           <Link to="/"> New Entry. </Link>
-          <Link to="/allentry"> All Entries. </Link>
-          <Link to="/random">  Random Entry. </Link>
+          <Link to="/AllEntry"> All Entries. </Link>
+          <Link to="/Random">  Random Entry. </Link>
         </div>
       </div>
 
 
       <Routes>
         <Route path="/" element={<NewEntry />} />
-        <Route path="/allentry" element={<AllEntry />} /> 
-        <Route path="/random" element={<Random />} /> 
+        <Route path="/AllEntry" element={<AllEntry />} /> 
+        <Route path="/Random" element={<Random />} /> 
 
       </Routes>
 

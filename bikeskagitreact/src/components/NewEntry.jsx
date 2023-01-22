@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useRidesContext } from "../hooks/useRidesContext"
+
 
 const NewEntry = () => {
+    const { dispatch } = useRidesContext()
     const [date, setDate] = useState('')
     const [startloc, setStartLoc] = useState('')
     const [endloc, setEndLoc] = useState('')
@@ -24,12 +27,21 @@ const NewEntry = () => {
             }
         })
         const json = await response.json()
+
         if(!response.ok) {
             setError(json.error)
         }
         if (response.ok) {
+            setDate('')
+            setStartLoc('')
+            setEndLoc('')
+            setMileage('')
+            setElevation('')
+            setNotes('')
+            setRestPin('')
             setError(null)
             console.log('new ride added', json)
+            dispatch({type: 'CREATE_RIDE', payload: json})
         }
     }
 

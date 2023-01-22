@@ -1,23 +1,37 @@
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useRidesContext } from "../hooks/useRidesContext"
 
 
 
 const AllEntry = () => {
-    const[rides, setRides] = useState(null)
+    const {rides, dispatch} = useRidesContext()
 
+    // GET
     useEffect(() => {
         const fetchRides = async() => {
             const response = await fetch('/api/rides')
             const json = await response.json()
 
             if (response.ok) {
-                setRides(json)
+                dispatch({type: 'SET_RIDES', payload: json})
             }
         }
 
         fetchRides()
     }, [])
+
+    // DELETE
+    // const handleClick = async () => {
+    //     const response = await fetch('/api/rides/' + rides._id {
+    //         method: 'DELETE'
+    //     })
+    //     const json = await response.json()
+
+    //     if (response.ok) {
+
+    //     }
+    // }
 
     return (
         <div className="home"> 
@@ -32,7 +46,7 @@ const AllEntry = () => {
                     <p key={rides._id}>Elevation (ft): {rides.elevation}</p>
                     <p key={rides._id}>Notes: {rides.notes}</p>
                     <p key={rides._id}>Rest Location (lat/lon): {rides.restpin}</p>
-                    <br></br>
+                    {/* <span onClick={handleClick}>delete</span> */}
                     </>
                 ))}
             </div>
