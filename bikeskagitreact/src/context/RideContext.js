@@ -6,12 +6,16 @@ export const ridesReducer = (state, action) => {
     switch (action.type) {
         case 'SET_RIDES' :
             return {
-                rides: action.payload
+                ride: action.payload
             }
         case 'CREATE_RIDE':
             return {
-                rides:[action.payload, ...state.rides]
+                ride:[action.payload, ...state.ride]
             }    
+        case 'DELETE_RIDE':
+            return {
+                ride: state.ride.filter((r) => r._id !== action.payload._id)
+            }
         default:
             return state
     }
@@ -19,7 +23,7 @@ export const ridesReducer = (state, action) => {
 
 export const RidesContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ridesReducer, {
-        rides: null
+        ride: null
     })
 
 
